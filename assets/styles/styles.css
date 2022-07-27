@@ -48,7 +48,7 @@ section {
     position: absolute;
     left: 0;
     top: 0;
-    padding: 3rem 18rem;
+    padding: 5rem 5rem;
 }
 
 .section {
@@ -255,12 +255,19 @@ section {
 }
 
 /*Independent components*/
-.btn-container {
+.btn-container{
     display: flex;
     align-self: flex-start;
 }
 
-.main-btn {
+.skill-container {
+    display: flex;
+    align-self: flex-start;
+    margin: 6px 1rem;
+}
+
+.main-btn,
+.main-skill {
     border-radius: 30px;
     color: inherit;
     font-weight: 600;
@@ -274,6 +281,10 @@ section {
 
 .main-btn .btn-text {
     padding: 0 2rem;
+}
+
+.main-skill .skill-text {
+    padding: 10px 2rem;
 }
 
 .main-btn .btn-icon {
@@ -305,4 +316,71 @@ section {
     background-color: var(--color-secondary);
     transform: translateX(0);
     transition: all 0.4s ease-out;
+}
+
+.main-title {
+    text-align: center;
+}
+
+.main-title h2 {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.main-title h2 span {
+    color: var(--color-secondary);
+}
+
+/* About */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3.5rem;
+    padding-bottom: 5rem;
+    padding-right: 5rem;
+}
+
+.about-container p {
+    line-height: 2rem;
+    color: var(--color-grey-1);
+    padding: 1rem 0;
+}
+
+.about-container h4 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.about-skills {
+    padding-bottom: 4rem;
+}
+
+.skill-title {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 3.5rem 0;
+    position: relative;
+}
+
+.skill-title::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 40%;
+    height: 1px;
+    background-color: var(--color-grey-5);
+    transform: translateX(-50%);
+}
+
+.about-skills .skill-elements{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4px;
 }
