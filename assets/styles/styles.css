@@ -205,57 +205,8 @@ section {
     line-height: 2rem;
 }
 
-@media (max-width:800px) {
-    .header-content .left-header .image {
-        border-radius: var(--br-sm-2);
-        height: 200px;
-        width: 200px;
-        margin-left: 2.5rem;
-        border-radius: 50%;
-        background-color: var(--color-black);
-        transition: all 0.4s ease-in-out;
-    }
-}
-
-@media (max-width:600px) {
-    .header-content .left-header .image {
-        border-radius: var(--br-sm-2);
-        height: 130px;
-        width: 130px;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 50%;
-        background-color: var(--color-black);
-        transition: all 0.4s ease-in-out;
-    }
-
-    .header-content {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .header-content .right-header {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding-right: 5rem;
-        padding-left: 2rem;
-    }
-
-    .header-content .left-header {
-        width: 100%;
-    }
-
-    .header-content .left-header .h-shape {
-        width: 100%;
-        height: 50%;
-        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-    }
-}
-
 /*Independent components*/
-.btn-container{
+.btn-container {
     display: flex;
     align-self: flex-start;
 }
@@ -376,11 +327,124 @@ section {
     transform: translateX(-50%);
 }
 
-.about-skills .skill-elements{
+.about-skills .skill-elements {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding: 0 4px;
+}
+
+/*Timeline*/
+.about-certifications {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    padding-bottom: 3rem;
+}
+
+.about-certifications .timeline-item {
+    position: relative;
+    padding-left: 1.5rem;
+    border-left: 1px solid var(--color-grey-5);
+}
+
+.about-certifications .timeline-item .tl-icon {
+    position: absolute;
+    left: -27px;
+    top: 0;
+    background-color: var(--color-secondary);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.about-certifications .timeline-item .tl-icon i {
+    font-size: 1.3rem;
+}
+
+.about-certifications .timeline-item .tl-duration {
+    padding: 0.2rem 0.6rem;
+    background-color: var(--color-grey-5);
+    border-radius: 15px;
+    display: inline-block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.about-certifications .timeline-item h5 {
+    padding: 1rem 0;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.about-certifications .timeline-item h5 span {
+    color: var(--color-grey-2);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.about-certifications .timeline-item p {
+    color: var(--color-grey-2);
+}
+
+@media (max-width:800px) {
+    .header-content .left-header .image {
+        border-radius: var(--br-sm-2);
+        height: 200px;
+        width: 200px;
+        margin-left: 2.5rem;
+        border-radius: 50%;
+        background-color: var(--color-black);
+        transition: all 0.4s ease-in-out;
+    }
+}
+
+@media (max-width:600px) {
+    .header-content .left-header .image {
+        border-radius: var(--br-sm-2);
+        height: 130px;
+        width: 130px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50%;
+        background-color: var(--color-black);
+        transition: all 0.4s ease-in-out;
+    }
+
+    .header-content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .header-content .right-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 5rem;
+        padding-left: 2rem;
+    }
+
+    .header-content .left-header {
+        width: 100%;
+    }
+
+    .header-content .left-header .h-shape {
+        width: 100%;
+        height: 50%;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .about-certifications {
+        display: flex;
+        flex-direction: column;
+    }
 }
